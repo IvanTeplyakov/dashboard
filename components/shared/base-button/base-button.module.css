@@ -1,0 +1,76 @@
+.button {
+    background-color: var(--primary-100);
+    border: none;
+    border-radius: 4px;
+    height: 40px;
+    composes: caption-200 from global;
+    color: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: var(--primary-80);
+}
+
+.leftIcon {
+    background-color: #FFFFFF;
+}
+
+.destructive {
+    background-color: var(--red-100);
+}
+
+.destructive:hover {
+    background-color: var(--red-80);
+}
+
+.secondary {
+    background-color: var(--primary-40);
+    color: var(--primary-100);
+}
+
+.secondary:hover {
+    background-color: var(--primary-30);
+}
+
+.destructiveSecondary {
+    background-color: var(--red-30);
+    color: var(--red-100);
+}
+
+.destructiveSecondary:hover {
+    background-color: var(--red-40);
+}
+
+.white {
+    border: 1px solid var(--general-50);
+    background-color: #FFFFFF;
+    color: var(--primary-100);
+}
+
+.white:hover {
+    background-color: #F5F6FA;
+}
+
+.disabled {
+    background-color: var(--general-50);
+    color: #FFFFFF;
+}
+
+.disabled:hover {
+    cursor: not-allowed;
+    background-color: var(--general-50);
+}
+
+.large {
+    height: 48px;
+}
+
+.small {
+    height: 36px;
+    composes: caption-100 from global;
+}
