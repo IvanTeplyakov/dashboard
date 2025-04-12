@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.container:hover {
+    cursor: pointer;
+}
+
+.icon {
+    width: 18px;
+    height: 15px;
+}
+
+.icon div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 15px;
+}
+
+.caption {
+    composes: caption-200 from global;
+}
+
+.radio {
+    background-color: var(--primary-100);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--general-50);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    width: 10px;
+    height: 10px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+}
+
+.none {
+    background-color: transparent;
+}
+
+.error {
+    border-color: #F32227;
+}
+
+.disabled {
+    background-color: #F5F6FA;
+}

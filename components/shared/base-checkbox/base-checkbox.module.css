@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.container:hover {
+    cursor: pointer;
+}
+
+.icon {
+    width: 18px;
+    height: 15px;
+}
+
+.icon div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 15px;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+
+    background-color: #1E5EFF;
+}
+
+.caption {
+    composes: caption-200 from global;
+}
+
+.none {
+    background-color: #FFFFFF;
+    border: 1px solid var(--general-50);
+}
+
+.error {
+    background-color: #FFFFFF;
+    border: 1px solid #F32227;
+}
+
+.disabled {
+    background-color: #F5F6FA;
+    border: 1px solid var(--general-50);
+}

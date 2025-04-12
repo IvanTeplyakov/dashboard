@@ -1,0 +1,55 @@
+:root {
+    --general-100: #131523;
+    --general-90: #333752;
+    --general-80: #5A607F;
+    --general-70: #7E84A3;
+    --general-60: #A1A7C4;
+    --general-50: #D7DBEC;
+    --general-40: #E6E9F4;
+    --general-30: #131523;
+
+    --primary-100: #1E5EFF;
+    --primary-90: #336DFF;
+    --primary-80: #4F81FF;
+    --primary-70: #608DFF;
+    --primary-60: #89ABFF;
+    --primary-50: #B6CBFF;
+    --primary-40: #D9E4FF;
+    --primary-30: #ECF2FF;
+
+    --secondary-100: #1E5EFF;
+    --secondary-90: #336DFF;
+    --secondary-80: #4F81FF;
+    --secondary-70: #608DFF;
+    --secondary-60: #89ABFF;
+    --secondary-50: #B6CBFF;
+    --secondary-40: #D9E4FF;
+    --secondary-30: #ECF2FF;
+
+    --red-100: #F0142F;
+    --red-90: #F12B43;
+    --red-80: #F34359;
+    --red-70: #F45A6D;
+    --red-60: #F8919D;
+    --red-50: #FAB3BC;
+    --red-40: #FCD5D9;
+    --red-30: #FDE7EA;
+
+    --green-100: #06A561;
+    --green-90: #1FD286;
+    --green-80: #25E191;
+    --green-70: #48E9A5;
+    --green-60: #74EFB9;
+    --green-50: #95F6CC;
+    --green-40: #C4F8E2;
+    --green-30: #DAF9EC;
+
+    --yellow-100: #F99600;
+    --yellow-90: #FFC700;
+    --yellow-80: #FFD613;
+    --yellow-70: #FFE45F;
+    --yellow-60: #FFE582;
+    --yellow-50: #FFECA3;
+    --yellow-40: #FFF4C9;
+    --yellow-30: #FFF9E1;
+}

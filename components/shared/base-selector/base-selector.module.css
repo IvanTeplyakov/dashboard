@@ -1,0 +1,27 @@
+.selector {
+    color: var(--general-100);
+}
+
+.selector:hover {
+    color: var(--primary-100);
+    border-color: var(--general-60);
+}
+
+.selected {
+    color: var(--primary-100);
+    border: 2px solid var(--primary-100);
+}
+
+.disabled {
+    border-color: var(--general-50);
+    background-color: #F5F6FA;
+    color: var(--general-60);
+}
+
+.disabled:hover {
+    cursor: not-allowed;
+
+    border-color: var(--general-50);
+    background-color: #F5F6FA;
+    color: var(--general-60);
+}

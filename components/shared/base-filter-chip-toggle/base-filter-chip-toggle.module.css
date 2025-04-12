@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--general-50);
+    border-radius: 4px;
+
+    box-sizing: border-box;
+}
+
+.selector {
+    border: none;
+}
