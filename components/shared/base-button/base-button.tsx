@@ -11,6 +11,7 @@ export type BaseButtonProps = {
     size?: Size
     disabled?: boolean
     whenClick?: () => void
+    className?: string
 }
 
 export const BaseButton: React.FC<BaseButtonProps> = ({
@@ -20,6 +21,7 @@ export const BaseButton: React.FC<BaseButtonProps> = ({
     size = 'medium',
     disabled = false,
     whenClick,
+    className,
 }) => {
     const getIconColor = () => {
         if(disabled) {
@@ -43,6 +45,7 @@ export const BaseButton: React.FC<BaseButtonProps> = ({
         <button
             onClick={whenClick}
             className={clsx(
+                className,
                 styles.button,
                 styles[variant],
                 styles[size],

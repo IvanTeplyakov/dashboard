@@ -1,13 +1,18 @@
-import {BaseButton, BaseIcon} from "~/components";
+import {BaseButton, BaseCheckbox, BaseFilterChipToggle, BaseInput, BaseRadio, BaseSelector} from "~/components";
 import styles from './sidebar.module.css'
-import {BaseInput} from "~/components/shared/base-input/base-input";
 import {useState} from "react";
-import {BaseCheckbox} from "~/components/shared/base-checkbox/base-checkbox";
-import {error} from "next/dist/build/output/log";
+import {Option} from "~/types";
 
 export const Sidebar = () => {
     const [input, setInput] = useState('');
     const [checked, setChecked] = useState(false);
+    const [radio, setRadio] = useState(false);
+    const [toggle, setToggle] = useState(true);
+    const [selectorChecked, setSelectorChecked] = useState(false)
+
+    const handleChangeToggle = () => {
+        setToggle(!toggle)
+    }
 
     const handleChangeCheckbox = () => {
         setChecked(!checked);
@@ -16,6 +21,36 @@ export const Sidebar = () => {
     const handleChange = (value: string) => {
         setInput(value);
     }
+
+    const handleClickRadio = () => {
+        setRadio(!radio);
+    }
+
+    const handleClickSelector = () => {
+        setSelectorChecked(!selectorChecked);
+    }
+
+    const options:Option[] = [
+        {
+            value: 'toggle 1',
+            label: 'Toggle 1',
+        },
+        {
+            value: 'toggle 2',
+            label: 'Toggle 2',
+        },
+        {
+            value: 'toggle 3',
+            label: 'Toggle 3',
+        }
+    ]
+
+    const [toggleOption, setToggleOption] = useState(options[0])
+
+    const handleChangeToggleOption = (value: Option) => {
+        setToggleOption(value)
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.content}>
@@ -195,6 +230,53 @@ export const Sidebar = () => {
                     whenClick={handleChangeCheckbox}
                     caption={'Значение'}
                     error
+                />
+            </div>
+            <div className={styles.content}>
+                Radio
+                <BaseRadio
+                    caption={'Значение'}
+                    isChecked={radio}
+                    whenClick={handleClickRadio}
+                />
+                <BaseRadio
+                    caption={'Значение'}
+                    isChecked={radio}
+                    whenClick={handleClickRadio}
+                    disabled
+                />
+                <BaseRadio
+                    caption={'Значение'}
+                    isChecked={radio}
+                    whenClick={handleClickRadio}
+                    error
+                />
+            </div>
+            <div className={styles.content}>
+                Selector
+                <BaseSelector
+                    selected={selectorChecked}
+                    whenClick={handleClickSelector}
+                    value={'Селектор'}
+                />
+                <BaseSelector
+                    selected={selectorChecked}
+                    whenClick={handleClickSelector}
+                    value={'Селектор'}
+                    disabled
+                />
+                <BaseSelector
+                    selected={true}
+                    whenClick={handleClickSelector}
+                    value={'Селектор'}
+                />
+            </div>
+            <div className={styles.content}>
+                FilterChipToggle
+                <BaseFilterChipToggle
+                    selected={toggleOption}
+                    whenClick={handleChangeToggle}
+                    options={options}
                 />
             </div>
         </div>
